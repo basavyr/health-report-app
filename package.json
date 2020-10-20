@@ -1,0 +1,19 @@
+{
+    "name": "🌟 health-report-app",
+    "version": "1.0.0",
+    "description": "⚙️ Developing a web application for delivering a health report for DFCTI workplace by providing a text-based 📝 template which can be saved into the clipboard manager 📋",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/basavyr/health-report-app.git"
+    },
+    "author": "Robert Poenaru",
+    "license": "LICENSE",
+    "bugs": {
+        "url": "https://github.com/basavyr/health-report-app/issues"
+    },
+    "homepage": "https://github.com/basavyr/health-report-app#readme"
+}
