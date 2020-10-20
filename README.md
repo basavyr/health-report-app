@@ -10,3 +10,5 @@ A web-app for delivering health reports for DFCTI workplace.
 ## 🔧 Heroku integration and deployment 🚀
 
 The app is deployed to [Heroku](https://dashboard.heroku.com/apps).
+
+⚙️  Check the working application (service) [💪  here](https://robertpoenaru.herokuapp.com/).

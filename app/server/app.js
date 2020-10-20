@@ -6,6 +6,13 @@ const marked = require('marked')
 const app = express();
 
 //MIDDLEWARE
+app.use('/', (req, res, next) => {
+    console.log(`The URL: ${req.originalUrl}`);
+    // console.error(err.stack);
+    // res.status(500).json({ error: error.toString() });
+    next();
+});
+
 app.use('/report/:name', (req, res, next) => {
     console.log('  ⚠️ The middleware was activated! 🕐', Date.now());
     console.log('Request URL: ', req.originalUrl);
@@ -13,13 +20,8 @@ app.use('/report/:name', (req, res, next) => {
     console.log(`********************\n`);
     next();
 })
-app.use('/', (err, req, res, next) => {
-    console.log(`The URL: ${req.originalUrl}`);
-    console.error(err.stack);
-    res.status(500).json({ error: error.toString() });
-    next();
-});
 
+app.use(express.static(path.join(__dirname, '/../../')));
 
 //ROUTES
 app.get('/', (req, res) => {
@@ -29,7 +31,9 @@ app.get('/', (req, res) => {
 
 });
 app.get('/report', (req, res) => {
-    res.send('Report Page');
+    var readme_path = path.join(__dirname + '/../resources/report.md');
+    var readme_file = fs.readFileSync(readme_path, 'utf8');
+    res.send(marked(readme_file.toString()));
 });
 app.get('/report/:name', (req, res) => {
     var content = ['This is a health template for Mr ', req.params.name];
