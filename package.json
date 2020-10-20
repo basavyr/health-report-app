@@ -19,6 +19,7 @@
     "homepage": "https://github.com/basavyr/health-report-app#readme",
     "dependencies": {
         "express": "^4.17.1",
+        "marked": "^1.2.0",
         "nodemon": "^2.0.6"
     }
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-
+const fs = require('fs')
+const marked = require('marked')
 
 const app = express();
 
@@ -22,9 +23,10 @@ app.use('/', (err, req, res, next) => {
 
 //ROUTES
 app.get('/', (req, res) => {
-    // console.log(`The URL: ${req.originalUrl}`);
-    res.sendFile(path.join(__dirname + '../../../README.md'));
-    // next();
+    var readme_path = path.join(__dirname + '../../../README.md');
+    var readme_file = fs.readFileSync(readme_path, 'utf8');
+    res.send(marked(readme_file.toString()));
+
 });
 app.get('/report', (req, res) => {
     res.send('Report Page');
