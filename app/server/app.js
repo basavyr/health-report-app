@@ -1,4 +1,6 @@
 const express = require('express');
+const path = require('path');
+
 
 const app = express();
 
@@ -10,8 +12,10 @@ app.use('/report/:name', (req, res, next) => {
     console.log(`********************\n`);
     next();
 })
-app.use('/', (req, res, next) => {
+app.use('/', (err, req, res, next) => {
     console.log(`The URL: ${req.originalUrl}`);
+    console.error(err.stack);
+    res.status(500).json({ error: error.toString() });
     next();
 });
 
@@ -19,7 +23,8 @@ app.use('/', (req, res, next) => {
 //ROUTES
 app.get('/', (req, res) => {
     // console.log(`The URL: ${req.originalUrl}`);
-    res.send('Main page');
+    res.sendFile(path.join(__dirname + '../../../README.md'));
+    // next();
 });
 app.get('/report', (req, res) => {
     res.send('Report Page');
