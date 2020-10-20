@@ -26,5 +26,6 @@ with the department names being `DFCTI` and `DFT`.
 
 ___
 
-<!-- [ℹ️ *Back to main page*](../../README.md) -->
+[ℹ️ *Back to main page*](../../README.md)
+
 [ℹ️ *Back to main web-page*](https://robertpoenaru.herokuapp.com/)
