@@ -37,8 +37,15 @@ app.get('/report', (req, res) => {
     res.send(marked(readme_file.toString()));
 });
 app.get('/report/:name', (req, res) => {
-    var content = ['This is a health template for Mr ', req.params.name];
-    var head_of_department = req.params.name;
+    var head_of_department = '';
+    if (req.params.name === 'DFCTI')
+        head_of_department = 'Dulea';
+    else
+    if (req.params.name === 'DFT')
+        head_of_department = 'Isar';
+    else
+        head_of_department = req.params.name;
+    var content = ['This is a health template for Mr ', head_of_department];
     head_of_department = head_of_department.charAt(0).toUpperCase() + head_of_department.slice(1);
     var header = `## Stimate domnule ${head_of_department}, \n`;
     var today = new Date();
