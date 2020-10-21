@@ -12,8 +12,8 @@ There are two ways to use this service:
 
 | 🏢 Department   |   ✉️  Arrives to |
 |---|---|
-|DFCTI   | Mr. Dulea  |
-|DFT| Mr. Isar  |
+|[DFCTI](https://robertpoenaru.herokuapp.com/report/dulea)   | Mr. Dulea  |
+|[DFT](https://robertpoenaru.herokuapp.com/report/isar) | Mr. Isar  |
 
 
 2. Type the name of the department into the URL path, just like this:
@@ -26,6 +26,6 @@ with the department names being `DFCTI` and `DFT`.
 
 ___
 
-[ℹ️ *Back to main page*](../../README.md)
+<!-- [ℹ️ *Back to main page*](../../README.md) -->
 
 [ℹ️ *Back to main web-page*](https://robertpoenaru.herokuapp.com/)
