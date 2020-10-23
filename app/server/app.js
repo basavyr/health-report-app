@@ -50,13 +50,14 @@ app.get('/report/:name', (req, res) => {
     var header = `## Stimate domnule ${head_of_department}, \n`;
     var today = new Date();
     var message1 = `Astazi,  ${today.toString().slice(0,10)}, totul este OK la domiciliu. Mentionez ca nu am intrat in contact cu niciun confirmat de COVID-19 si ca nu prezint niciun simptom.  `;
-    var message2 = `Mentionez ca activitatea de munca are loc in conditii ideale.  `;
+    var message2 = `De asemenea, activitatea de munca are loc in conditii ideale.  `;
     var message3 = `Cu stima,  `;
     var message4 = `Robert Poenaru  `;
     var message5 = `*DFCTI | Tel. 0756070068 (Personal) | <robert.poenaru@theory.nipne.ro> (Work) | <robert.poenaru@protonmail.ch> (Personal) | Skype: <robert.poenaru@outlook.com>*  `;
     var home = `Comuna Cosna, Nr. 50, Sat Podu Cosnei, Judetul Suceava, Cod Postal 727191`; //🏚
     var dorm = `Magurele, Nr. 9,  Str. Fizicienilor, Judetul Ilfov, Cod Postal 077125`; //
-    var address = `**Current working residence:** ` + dorm;
+    var address = `**Current working residence:** ` + home;
+    // var main_page='';
     var body = header + message1 + '\n' +
         message2 + '\n' + '\n' + message3 + '\n' + message4 + '\n' + '\n' + message5 + '\n' + address;
     // console.log(marked(body));
