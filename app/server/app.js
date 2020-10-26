@@ -30,10 +30,10 @@ app.set('view engine', 'pug');
 
 //ROUTES
 app.get('/', (req, res) => {
-    var readme_path = path.join(__dirname + '/../../../README.md');
-    var readme_file = fs.readFileSync(readme_path, 'utf8');
+    // var readme_path = path.join(__dirname + '/../../../README.md');
+    // var readme_file = fs.readFileSync(readme_path, 'utf8');
     // res.sendFile(path.join(__dirname + '/../public/index.html'));
-    res.render('index.pug', { title: 'Hey', message: 'Hello there!' });
+    res.render('index.pug');
 });
 
 app.get('/report', (req, res) => {
